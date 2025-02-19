@@ -518,9 +518,9 @@ public class frame extends javax.swing.JFrame {
         Document doc = new Document(PageSize.A4, 40, 40, 40, 40);
         JTextField[] marks = getTexts();
         String Marks[] = new String[marks.length];
-        Image logo = Image("src\\Images\\Logo.png", 30, 708, 104, 104);
+        Image logo = Image("src\\Images\\left.png", 30, 708, 104, 104);
         File file = new File(SaveDirectory + "\\" + name.getText() + ".pdf");
-        Image health = Image("src\\Images\\HealthySchools.png", 440, 708, 125, 95);
+        Image health = Image("src\\Images\\right.png", 440, 708, 95, 95);
         Font font = new Font(Font.FontFamily.TIMES_ROMAN, 11, 1, BaseColor.GREEN);
         Font font1 = new Font(Font.FontFamily.TIMES_ROMAN, 11, 1, BaseColor.RED);
         Font font2 = new Font(Font.FontFamily.TIMES_ROMAN, 11, 1, new BaseColor(222, 191, 28));
@@ -534,7 +534,7 @@ public class frame extends javax.swing.JFrame {
             doc.open();
             doc.add(logo);
             doc.add(health);
-            Paragraph p = new Paragraph("GREENHILL INTERNATIONAL KANDY", font);
+            Paragraph p = new Paragraph("SCHOOL NAME", font);
             p.setAlignment(Element.ALIGN_CENTER);
             doc.add(p);
             p = new Paragraph("MIDDLE AND SENIOR SCHOOL", font1);
@@ -710,16 +710,13 @@ public class frame extends javax.swing.JFrame {
             case JFileChooser.APPROVE_OPTION:
                 System.out.println("approve = " + approve);
                 SaveDirectory = jfc.getSelectedFile().toPath().toString();
-                System.out.println("Path = " + SaveDirectory);
                 path.setText(SaveDirectory);
                 jfc.setVisible(false);
                 break;
             case JFileChooser.CANCEL_OPTION:
-                System.out.println("cancel = " + approve);
                 jfc.setVisible(false);
                 break;
             case JFileChooser.ERROR_OPTION:
-                System.out.println("error = " + approve);
                 jfc.setVisible(false);
                 break;
             default:
