@@ -428,11 +428,6 @@ public class frame extends javax.swing.JFrame {
         });
         jPanel1.add(clear, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 440, -1, -1));
 
-        grade1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                grade1ActionPerformed(evt);
-            }
-        });
         grade1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 grade1KeyPressed(evt);
@@ -684,10 +679,6 @@ public class frame extends javax.swing.JFrame {
         path.setText(SaveDirectory);
         name.requestFocus();
     }//GEN-LAST:event_clearActionPerformed
-
-    private void grade1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grade1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_grade1ActionPerformed
 
     private void grade1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_grade1KeyPressed
         grade.setText(grade1.getText());
